@@ -1,0 +1,128 @@
+.processSection {
+    position: relative;
+    min-height: 70vh;
+    max-width: 1200px;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.processContainer {
+    box-sizing: border-box;
+    background: #F3F3F3;
+    border: 1px solid #191A23;
+    box-shadow: 0px 5px 0px #191A23;
+    border-radius: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 41px 60px;
+    gap: 10px;
+    max-width: 1200px;
+    height: 159px;
+}
+
+.processContainer.expanded,
+.processContainer2.expanded {
+    background: #B9FF66;
+    height: auto;
+    padding-bottom: 41px;
+}
+
+.processWrap1 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; 
+    align-items: center;
+}
+
+.expanded .processWrap1,
+.expanded .processWrap2 {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #191A23;
+    margin-bottom: 20px;
+}
+
+.processWrapLeft {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.processWrapLeftText1 {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 60px;
+    color: #000000;
+    margin: 0;
+}
+
+.processWrapLeftText2 {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 38px;
+    color: #000000;
+    margin: 0;
+}
+
+.processWrapRight{
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.processWrapRight:hover {
+    transform: scale(1.1);
+}
+
+.processContainer2{
+    margin-top: 1.5rem;
+    box-sizing: border-box;
+    background: #F3F3F3;
+    border: 1px solid #191A23;
+    box-shadow: 0px 5px 0px #191A23;
+    border-radius: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 41px 60px;
+    gap: 10px;
+    max-width: 1200px;
+    height: 159px;
+}
+
+.processWrap2{
+ display: flex;
+    justify-content: space-between;
+    width: 100%; 
+    align-items: center;
+}
+
+.processContent {
+    width: 100%;
+    animation: slideDown 0.3s ease;
+}
+
+.processContent p {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: #000000;
+    margin: 0;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
