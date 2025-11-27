@@ -1,23 +1,23 @@
 import "./Login.css"
 import Image from "next/image";
-import signup from "@/assests/images/signup.png"
+import login from "@/assests/images/signup.png"
 import logo from "@/assests/images/Vector.png"
 import google from "@/assests/images/google.png"
 
-const SignUp = () => {
+const Login = () => {
     return (
-        <div className="registerSection"
+        <div className="loginSection"
         >
             <Image
-                src={signup}
-                alt="signup"
+                src={login}
+                alt="login"
                 fill
                 style={{ objectFit: "cover" }}
                 priority
-                className="registerImage"
+                className="loginImage"
             />
-            <div className="registerContainer">
-                <header className="registerHeader">
+            <div className="loginContainer">
+                <header className="loginHeader">
                     <Image
                         src={logo}
                         alt="Logo"
@@ -27,26 +27,18 @@ const SignUp = () => {
                     />
                     <span className="logoText">Xit</span>
                 </header>
-                <div className="registerTitle">Login</div>
-                <div className="registerSubTitle">Welcome back! </div>
-                <div className="registerForm">
-                    {/* <div className="registerInput">
-                        <label>First Name</label>
-                        <input placeholder="Text" type="text" />
-                    </div>
-                    <div className="registerInput">
-                        <label>Last Name</label>
-                        <input placeholder="Test" type="text" />
-                    </div> */}
-                    <div className="registerInput">
+                <div className="loginTitle">Login</div>
+                <div className="loginSubTitle">Welcome back! </div>
+                <div className="loginForm">
+                    <div className="loginInput">
                         <label>Email</label>
                         <input placeholder="test@example.com" type="email" />
                     </div>
-                    <div className="registerInput">
+                    <div className="loginInput">
                         <label>Password</label>
                         <input placeholder="pass123@" type="password" />
                     </div>
-                    <button type="button" className="registerButton" >
+                    <button type="button" className="loginButton" >
                         Login
                     </button>
                 </div>
@@ -54,7 +46,7 @@ const SignUp = () => {
                     <hr />
                     <span className="dividerText">OR</span>
                 </div>
-                <div className="registerSocial">
+                <div className="loginSocial">
                     <button
                         className="socialButton"
                     >
@@ -73,4 +65,4 @@ const SignUp = () => {
     )
 }
 
-export default SignUp
+export default Login

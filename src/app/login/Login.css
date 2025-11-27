@@ -1,10 +1,10 @@
-.registerImage {
+.loginImage {
     position: relative;
     width: 100%;
     min-height: 100vh;
 }
 
-.registerContainer {
+.loginContainer {
     box-sizing: border-box;
 
     position: absolute;
@@ -20,12 +20,11 @@
     overflow: hidden;
 }
 
-.registerHeader {
+.loginHeader {
     display: flex;
     gap: 8px;
     justify-content: flex-start;
 }
-
 
 .logoText {
     font-family: 'Space Grotesk';
@@ -35,7 +34,7 @@
     color: #ffff;
 }
 
-.registerTitle {
+.loginTitle {
     text-align: center;
     color: #ffff;
     font-size: 40px;
@@ -44,7 +43,7 @@
     font-weight: 700;
 }
 
-.registerSubTitle {
+.loginSubTitle {
     font-size: 20px;
     font-weight: 500;
     line-height: 24px;
@@ -55,20 +54,20 @@
     color: #ffff;
 }
 
-.registerInput {
+.loginInput {
     display: flex;
     flex-direction: column;
     gap: 8px;
     margin-bottom: 20px;
 }
 
-.registerInput label {
+.loginInput label {
     color: white;
     font-size: 13px;
     font-weight: 500;
 }
 
-.registerInput input {
+.loginInput input {
     background: white;
     border: none;
     border-radius: 12px;
@@ -78,11 +77,11 @@
     outline: none;
 }
 
-.registerInput input::placeholder {
+.loginInput input::placeholder {
     color: #ccc;
 }
 
-.registerButton {
+.loginButton {
     width: 100%;
     background: #bd0c47;
     color: #ffff;
@@ -95,7 +94,7 @@
     margin-top: 10px;
 }
 
-.registerButton:hover {
+.loginButton:hover {
     background: #bd0c47;
     color: #ffff;
 }
