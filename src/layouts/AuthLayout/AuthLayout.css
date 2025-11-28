@@ -1,0 +1,88 @@
+.authContainer {
+    width: 100%;
+    height: 100vh;
+    min-height: 100dvh;
+}
+
+.authSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+
+}
+
+.contentDiv {
+    flex: 1;
+    padding: 32px;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    background-color: #ffffff;
+}
+
+.authRight {
+    flex: 1;
+    position: relative;
+    height: 100vh;
+    min-height: 100dvh;
+}
+
+.imageContainer {
+    position: relative;
+    width: 100%;
+    min-height: 100dvh;
+    border-radius: 24px;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+}
+
+.loginImage {
+    flex: none;
+    order: 0;
+    align-self: stretch;
+
+}
+
+@media (max-width: 768px) {
+    .authContainer {
+        background-color: #ffffff;
+        padding: 16px;
+    }
+    
+    .authSection {
+        padding: 0;
+        flex-direction: column;
+        gap: 0;
+        align-items: stretch;
+    }
+    
+    .contentDiv {
+        flex: none;
+        padding: 24px;
+        width: 100%;
+        order: 2;
+    }
+    
+    .authRight {
+        flex: none;
+        height: auto;
+        min-height: auto;
+        width: 100%;
+        order: 1;
+        margin-bottom: 24px;
+    }
+    
+    .imageContainer {
+        min-height: 180px;
+        height: 180px;
+        border-radius: 16px;
+    }
+}

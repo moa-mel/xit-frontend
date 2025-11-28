@@ -1,22 +1,15 @@
+"use client"
 import "./SignUp.css"
 import Image from "next/image";
 import signup from "@/assests/images/signup.png"
-import logo from "@/assests/images/Vector.png"
+import logo from "@/assests/images/Icon.png"
 import google from "@/assests/images/google.png"
+import { useRouter } from "next/navigation";
 
 const SignUp = () => {
+    const router = useRouter()
     return (
-        <div className="registerSection"
-        >
-            <Image
-                src={signup}
-                alt="signup"
-                fill
-                style={{ objectFit: "cover" }}
-                priority
-                className="registerImage"
-            />
-            <div className="registerContainer">
+        <div className="registerSection" >
                 <header className="registerHeader">
                     <Image
                         src={logo}
@@ -27,17 +20,17 @@ const SignUp = () => {
                     />
                     <span className="logoText">Xit</span>
                 </header>
-                <div className="registerTitle">Login</div>
-                <div className="registerSubTitle">Welcome back! </div>
+                <div className="registerTitle">Sign Up</div>
+                <div className="registerSubTitle">Start Xitting by creating an account! </div>
                 <div className="registerForm">
-                    {/* <div className="registerInput">
+                    <div className="registerInput">
                         <label>First Name</label>
                         <input placeholder="Text" type="text" />
                     </div>
                     <div className="registerInput">
                         <label>Last Name</label>
                         <input placeholder="Test" type="text" />
-                    </div> */}
+                    </div>
                     <div className="registerInput">
                         <label>Email</label>
                         <input placeholder="test@example.com" type="email" />
@@ -47,12 +40,12 @@ const SignUp = () => {
                         <input placeholder="pass123@" type="password" />
                     </div>
                     <button type="button" className="registerButton" >
-                        Login
+                        Sign Up
                     </button>
                 </div>
                 <div className="divider">
                     <hr />
-                    <span className="dividerText">OR</span>
+                    <span className="dividerText">Or</span>
                 </div>
                 <div className="registerSocial">
                     <button
@@ -68,8 +61,10 @@ const SignUp = () => {
                     </button>
 
                 </div>
+                 <p className="signUpLink">
+                Already have an account? <span onClick={() => router.push("/login")}>Sign in</span>
+              </p>
             </div>
-        </div>
     )
 }
 

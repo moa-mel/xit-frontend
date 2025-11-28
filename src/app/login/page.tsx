@@ -28,7 +28,7 @@ const Login = () => {
                     <span className="logoText">Xit</span>
                 </header>
                 <div className="loginTitle">Login</div>
-                <div className="loginSubTitle">Welcome back! </div>
+                <div className="loginSubTitle">Welcome back 👋 </div>
                 <div className="loginForm">
                     <div className="loginInput">
                         <label>Email</label>
@@ -37,6 +37,9 @@ const Login = () => {
                     <div className="loginInput">
                         <label>Password</label>
                         <input placeholder="pass123@" type="password" />
+                        <span className="forgotPassword">
+                            Forgot password?
+                        </span>
                     </div>
                     <button type="button" className="loginButton" >
                         Login

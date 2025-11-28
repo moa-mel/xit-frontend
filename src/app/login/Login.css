@@ -8,10 +8,10 @@
     box-sizing: border-box;
 
     position: absolute;
-    width: 690px;
-    height: 690px;
-    left: calc(50% - 690px/2);
-    top: calc(50% - 690px/2);
+    width: 590px;
+    height: 590px;
+    left: calc(50% - 590px/2);
+    top: calc(50% - 590px/2);
 
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(12.5px);
@@ -81,6 +81,15 @@
     color: #ccc;
 }
 
+.forgotPassword {
+    align-self: flex-end;
+    margin-top: 4px;
+    font-size: 0.875rem;
+    color: #1877f2;
+    cursor: pointer;
+    text-decoration: none;
+}
+
 .loginButton {
     width: 100%;
     background: #bd0c47;
@@ -132,4 +141,140 @@ hr {
     gap: 12px;
     cursor: pointer;
     width: 100%;
+}
+
+/* Tablet and smaller devices */
+@media (max-width: 768px) {
+    .loginContainer {
+        width: 90%;
+        height: auto;
+        min-height: auto;
+        left: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 30px 24px;
+        border-radius: 24px;
+    }
+
+    .loginTitle {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .loginSubTitle {
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 1.5rem;
+    }
+
+    .loginInput {
+        margin-bottom: 16px;
+    }
+
+    .loginInput input {
+        padding: 14px 16px;
+        font-size: 14px;
+    }
+
+    .loginButton {
+        padding: 14px;
+        font-size: 15px;
+    }
+
+    .divider {
+        margin: 1.25rem 0;
+    }
+
+    .socialButton {
+        padding: 14px;
+        font-size: 15px;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+    .loginContainer {
+        width: 92%;
+        left: 4%;
+        padding: 24px 20px;
+        border-radius: 20px;
+    }
+
+    .loginHeader {
+        gap: 6px;
+    }
+
+    .logoText {
+        font-size: 0.9rem;
+    }
+
+    .loginTitle {
+        font-size: 28px;
+        line-height: 36px;
+        margin-top: 1rem;
+    }
+
+    .loginSubTitle {
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 1.25rem;
+    }
+
+    .loginInput {
+        margin-bottom: 14px;
+    }
+
+    .loginInput label {
+        font-size: 12px;
+    }
+
+    .loginInput input {
+        padding: 12px 14px;
+        font-size: 13px;
+        border-radius: 10px;
+    }
+
+    .forgotPassword {
+        font-size: 0.75rem;
+    }
+
+    .loginButton {
+        padding: 12px;
+        font-size: 14px;
+        border-radius: 10px;
+    }
+
+    .divider {
+        margin: 1rem 0;
+    }
+
+    .dividerText {
+        font-size: 0.75rem;
+    }
+
+    .socialButton {
+        padding: 12px;
+        font-size: 14px;
+        border-radius: 10px;
+        gap: 8px;
+    }
+}
+
+/* Very small mobile devices */
+@media (max-width: 360px) {
+    .loginContainer {
+        width: 95%;
+        left: 2.5%;
+        padding: 20px 16px;
+    }
+
+    .loginTitle {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .loginSubTitle {
+        font-size: 14px;
+        line-height: 18px;
+    }
 }
