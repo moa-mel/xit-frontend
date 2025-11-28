@@ -1,7 +1,6 @@
 "use client"
 import "./SignUp.css"
 import Image from "next/image";
-import signup from "@/assests/images/signup.png"
 import logo from "@/assests/images/Icon.png"
 import google from "@/assests/images/google.png"
 import { useRouter } from "next/navigation";

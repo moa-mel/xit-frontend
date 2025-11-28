@@ -1,0 +1,142 @@
+.verifyHeader {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-start;
+    margin-top: -2rem; 
+    margin-bottom: 2rem;
+}
+
+
+.logoText {
+    font-family: 'Space Grotesk';
+    line-height: 1rem;
+    font-size: 1rem;
+    font-weight: 200;
+    color: #000;
+}
+
+.verifyTitle {
+    text-align: center;
+    color: #000;
+    font-size: 40px;
+    line-height: 56px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+}
+
+.verifyInput {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.verifyInput label {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.01em;
+    color: #0C1421;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.verifyInput input {
+    background: #F7FBFF;
+    border: none;
+    border-radius: 12px;
+    padding: 16px 20px;
+    font-size: 13px;
+    color: #8897AD;
+    outline: none;
+    border: 1px solid #D4D7E3;
+}
+
+.verifyInput input::placeholder {
+    color: #8897ad; 
+}
+
+/* Fix for autofill override */
+.verifyInput input:-webkit-autofill,
+.verifyInput input:-webkit-autofill:hover,
+.verifytInput input:-webkit-autofill:focus {
+    -webkit-text-fill-color: #8897AD;
+    -webkit-box-shadow: 0 0 0px 1000px #F7FBFF inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Ensure placeholder shows for autofilled inputs */
+.verifyInput input:-webkit-autofill::placeholder {
+    color: #8897AD !important;
+    opacity: 1;
+}
+
+.verifyButton {
+    width: 100%;
+    background: #162d3a;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 16px;
+    font-size: 15px;
+    font-weight: 400;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.verifyButton:hover {
+    background: #162d3a;
+    color: #fff;
+}
+
+.divider {
+    width: 100%;
+    position: relative;
+}
+
+hr {
+    border: 1px solid var#000;
+    position: relative;
+    width: 100%;
+}
+
+.dividerText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000;
+    padding: 0 0.5rem;
+    font-size: 0.8rem;
+}
+
+.loginLink{
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    color: #000;
+}
+
+.loginLink span{
+    color: #1877f2;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .verifyHeader{
+        display: none;
+    }
+    .verifyTitle{
+        font-size: 19px;
+        font-family: 'Space Grotesk';
+        font-weight: 600;
+        line-height: 4rem;
+    }
+}

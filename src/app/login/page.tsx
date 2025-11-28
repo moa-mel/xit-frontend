@@ -1,10 +1,13 @@
+"use client"
 import "./Login.css"
 import Image from "next/image";
 import login from "@/assests/images/signup.png"
 import logo from "@/assests/images/Vector.png"
 import google from "@/assests/images/google.png"
+import { useRouter } from "next/navigation";
 
 const Login = () => {
+    const router = useRouter()
     return (
         <div className="loginSection"
         >
@@ -37,7 +40,7 @@ const Login = () => {
                     <div className="loginInput">
                         <label>Password</label>
                         <input placeholder="pass123@" type="password" />
-                        <span className="forgotPassword">
+                        <span onClick={() => router.push("/forgot-password")} className="forgotPassword">
                             Forgot password?
                         </span>
                     </div>

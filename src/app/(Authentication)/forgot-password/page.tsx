@@ -1,14 +1,15 @@
+
 "use client"
-import "./VerifyEmail.css"
+import "./ForgotPassword.css"
 import Image from "next/image";
 import logo from "@/assests/images/Icon.png"
 import { useRouter } from "next/navigation";
 
-const VerifyEmail = () => {
+const ForgotPassword = () => {
     const router = useRouter()
     return (
-        <div className="verifySection" >
-            <header className="verifyHeader">
+        <div className="forgotSection" >
+            <header className="forgotHeader">
                 <Image
                     src={logo}
                     alt="Logo"
@@ -18,14 +19,14 @@ const VerifyEmail = () => {
                 />
                 <span className="logoText">Xit</span>
             </header>
-            <div className="verifyTitle">Verify Email</div>
-            <div className="verifyForm">
-                <div className="verifyInput">
-                    <label>OTP Code</label>
-                    <input placeholder="pass123@" type="number" />
+            <div className="forgotTitle">Forgot Password</div>
+            <div className="forgotForm">
+                <div className="forgotInput">
+                    <label>Email</label>
+                    <input placeholder="test@example.com" type="email" />
                 </div>
-                <button type="button" className="verifyButton" >
-                    Verify Email
+                <button type="button" className="forgotButton" >
+                    Send Email
                 </button>
             </div>
             <div className="divider">
@@ -39,4 +40,4 @@ const VerifyEmail = () => {
     )
 }
 
-export default VerifyEmail
+export default ForgotPassword
