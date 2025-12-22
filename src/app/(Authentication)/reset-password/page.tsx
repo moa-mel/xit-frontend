@@ -2,7 +2,7 @@
 import { useRouter } from "next/navigation"
 import "./ResetPassword.css"
 import Image from "next/image";
-import logo from "@/assests/images/Icon.png"
+import logo from "@/assets/images/Icon.png"
 import { toast } from "react-toastify";
 import { useEffect, useState } from "react";
 import { resetPasswordSchema } from "@/utils/helpers/validation";

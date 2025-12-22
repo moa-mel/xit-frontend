@@ -1,7 +1,7 @@
 "use client"
 import "./VerifyEmail.css"
 import Image from "next/image";
-import logo from "@/assests/images/Icon.png"
+import logo from "@/assets/images/Icon.png"
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 import { useEffect, useState } from "react";

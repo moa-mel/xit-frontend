@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import "./AuthLayout.css";
 import Image from "next/image";
-import login from "@/assests/images/Art.png"
+import login from "@/assets/images/Art.png"
 
 const AuthLayout = ({ children }: { children: ReactNode }) => {
     return (

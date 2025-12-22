@@ -1,8 +1,8 @@
 "use client"
 import "./SignUp.css"
 import Image from "next/image";
-import logo from "@/assests/images/Icon.png"
-import google from "@/assests/images/google.png"
+import logo from "@/assets/images/Icon.png"
+import google from "@/assets/images/google.png"
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 import { useEffect, useState } from "react";

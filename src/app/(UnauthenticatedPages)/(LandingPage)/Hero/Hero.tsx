@@ -8,7 +8,7 @@ const Hero = () => {
     const router = useRouter();
 
     const handleGetStarted = () => {
-        router.push("/signup")
+        router.push("/sign-up")
     }
     return (
         <div className="heroSection">
