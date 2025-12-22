@@ -38,7 +38,6 @@ export const resetPasswordSchema = Yup.object().shape({
         ),
     confirmPassword: Yup.string()
         .required("Confirm password is required")
-        .test("password-match", "Passwords must match", function (value) {
-            return this.parent.new_password1 === value;
-        })
+        // Use Yup.ref('password') to match the field named "password"
+        .oneOf([Yup.ref('password')], "Passwords must match")
 });

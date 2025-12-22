@@ -1,10 +1,9 @@
 "use client";
 import "./Services.css"
 import Image from "next/image";
-import Link from "next/link";
-import illustration1 from "@/assests/images/Illustration(2).png"
-import illustration2 from "@/assests/images/Illustration(3).png"
-import ArrowUp from "@/assests/images/Icon(1).png"
+import illustration1 from "@/assets/images/Illustration(2).png"
+import illustration2 from "@/assets/images/Illustration(3).png"
+import ArrowUp from "@/assets/images/Icon(1).png"
 
 const Services = () => {
     return (

@@ -1,5 +1,5 @@
 "use client"
-import { useRouter } from "next/navigation"
+import { useRouter, useSearchParams } from "next/navigation"
 import "./ResetPassword.css"
 import Image from "next/image";
 import logo from "@/assets/images/Icon.png"
@@ -17,25 +17,47 @@ interface ResetPasswordForm {
 
 const ResetPassword = () => {
     const router = useRouter()
+    const [resetPassword, { isLoading }] = useResetPasswordMutation();
+    const searchParams = useSearchParams();
+    const identifier = searchParams.get('identifier');
 
-    const [forgotPassword, { isLoading }] = useResetPasswordMutation();
-        
-        const {
-            register,
-            handleSubmit,
-            formState: { errors },
-        } = useForm<ResetPasswordForm>({
-            resolver: yupResolver(resetPasswordSchema),
-        });
-    
-        const onSubmit = async (data: ResetPasswordForm) => {
-            try {
-                const response = await forgotPassword(data).unwrap();
-                toast.success("Password reset successfully!");
-            } catch (error: any) {
-                toast.error(error?.data?.message || "Failed to send reset email");
-            }
-        };
+    // Check if identifier exists on mount
+    useEffect(() => {
+        if (!identifier) {
+            toast.error("Invalid reset link. Please request a new one.");
+            router.push("/forgot-password");
+        }
+    }, [identifier, router]);
+
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm<ResetPasswordForm>({
+        resolver: yupResolver(resetPasswordSchema),
+    });
+
+    const onSubmit = async (data: ResetPasswordForm) => {
+        if (!identifier) {
+            toast.error("Invalid reset link. Please request a new one.");
+            return;
+        }
+
+        try {
+            const response = await resetPassword({
+                body: {
+                    password: data.password,
+                    confirmPassword: data.confirmPassword
+                },
+                identifier
+            }).unwrap();
+
+            toast.success("Password reset successfully!");
+            router.push("/login");
+        } catch (error: any) {
+            toast.error(error?.data?.message || "Failed to reset password");
+        }
+    };
 
     return (
         <div className="resetSection" >
@@ -54,13 +76,19 @@ const ResetPassword = () => {
                 <div className="resetInput">
                     <label>Password</label>
                     <input {...register("password")} placeholder="pass123@" type="password" />
+                    {errors.password && (
+                        <span className="error">{errors.password.message}</span>
+                    )}
                 </div>
                 <div className="resetInput">
                     <label>Confirm Password</label>
                     <input {...register("confirmPassword")} placeholder="pass123@" type="password" />
+                    {errors.confirmPassword && (
+                        <span className="error">{errors.confirmPassword.message}</span>
+                    )}
                 </div>
                 <button type="submit" className="resetButton" >
-                    Reset Password
+                    {isLoading ? "Resetting..." : "Reset Password"}
                 </button>
             </form>
             <div className="divider">

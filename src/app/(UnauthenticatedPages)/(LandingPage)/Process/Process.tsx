@@ -1,8 +1,8 @@
 "use client";
 import "./Process.css"
 import Image from "next/image";
-import Plus from "@/assests/images/Plus icon.png"
-import Minus from "@/assests/images/Plus icon(1).png"
+import Plus from "@/assets/images/Plus icon.png"
+import Minus from "@/assets/images/Plus icon(1).png"
 import { useState } from "react";
 
 const Process = () => {

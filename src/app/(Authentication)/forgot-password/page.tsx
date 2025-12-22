@@ -29,8 +29,9 @@ const ForgotPassword = () => {
     const onSubmit = async (data: ForgotPasswordForm) => {
         try {
             const response = await forgotPassword(data).unwrap();
+            const identifier = response.data.identifier;
             toast.success("Password reset email sent successfully!");
-            router.push("/verify-email");
+            router.push(`/verify-email?type=reset&identifier=${identifier}`);
         } catch (error: any) {
             toast.error(error?.data?.message || "Failed to send reset email");
         }

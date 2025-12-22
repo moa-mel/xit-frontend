@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import logo from "@/assests/images/Icon.png"
+import logo from "@/assets/images/Icon.png"
 import "./Header.css"
-import avatar from "@/assests/images/avatar1.webp"
+import avatar from "@/assets/images/avatar1.webp"
 import { useState } from "react";
 import { Dropdown } from "react-bootstrap";
 

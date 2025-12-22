@@ -2,10 +2,10 @@
 import "./Footer.css"
 import Image from "next/image";
 import Link from "next/link";
-import logo from "@/assests/images/Vector.png"
-import linkedIn from "@/assests/images/Social icon(1).png"
-import facebook from "@/assests/images/Social icon(2).png"
-import x from "@/assests/images/Social icon(3).png"
+import logo from "@/assets/images/Vector.png"
+import linkedIn from "@/assets/images/Social icon(1).png"
+import facebook from "@/assets/images/Social icon(2).png"
+import x from "@/assets/images/Social icon(3).png"
 
 const Footer = () => {
     return (

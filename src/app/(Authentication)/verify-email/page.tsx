@@ -27,9 +27,9 @@ const VerifyEmail = () => {
     });
 
 
-    const handleVerify = async (data: { otp: string }) => {
-        if (!identifier) {
-            toast.error("Invalid verification link");
+    const handleVerify = async (data: any) => { 
+        if (!identifier || !type) {
+            toast.error("Missing verification details. Please try again.");
             return;
         }
 
@@ -37,18 +37,20 @@ const VerifyEmail = () => {
             await verifyEmail({
                 otp: data.otp,
                 identifier,
+                type: type as "signup" | "reset", 
             }).unwrap();
 
             toast.success("Verification successful");
 
-            if (type === "signup") router.push("/login");
-            if (type === "reset") router.push(`/reset-password?identifier=${identifier}`);
+            if (type === "signup") {
+                router.push("/login");
+            } else if (type === "reset") {
+                router.push(`/reset-password?identifier=${identifier}`);
+            }
         } catch (err: any) {
             toast.error(err?.data?.message || "Verification failed");
         }
     };
-
-
 
     return (
         <div className="verifySection" >

@@ -130,23 +130,23 @@ export const authService = apiSlice.injectEndpoints({
 
         forgotPassword: builder.mutation({
             query: (body) => ({
-                url: "/auth/reset-password/",
+                url: "/auth/forget-password",
                 method: "POST",
                 body
             })
         }),
         resetPassword: builder.mutation({
-            query: (body) => ({
-                url: "/auth/set-new-password/",
+            query: ({body,  identifier }) => ({
+                url: `/auth/reset-password/${identifier}`,
                 method: "POST",
                 body
             })
         }),
         verifyEmail: builder.mutation({
-            query: ({ otp, identifier }) => ({
+            query: ({ otp, identifier, type }) => ({
                 url: `/auth/verify-email/${identifier}`,
                 method: "POST",
-                body: { otp },
+                body: { otp, type },
             }),
         }),
 
