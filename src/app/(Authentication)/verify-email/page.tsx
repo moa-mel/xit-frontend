@@ -3,9 +3,16 @@ import "./VerifyEmail.css"
 import Image from "next/image";
 import logo from "@/assests/images/Icon.png"
 import { useRouter } from "next/navigation";
+import { toast } from "react-toastify";
+import { useEffect, useState } from "react";
+import { verifyEmailSchema } from "@/utils/helpers/validation";
+import { yupResolver } from "@hookform/resolvers/yup";
 
 const VerifyEmail = () => {
     const router = useRouter()
+    const [isOtpActive, setIsOtpActive] = useState(false);
+    const resolver = yupResolver(verifyEmailSchema(isOtpActive));
+
     return (
         <div className="verifySection" >
             <header className="verifyHeader">

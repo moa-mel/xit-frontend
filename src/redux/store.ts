@@ -1,15 +1,18 @@
-import { configureStore } from "@reduxjs/toolkit"
-import xitReducer from "@/redux/api/apiSlice";
-
+import { configureStore } from "@reduxjs/toolkit";
+import { apiSlice } from "@/redux/api/apiSlice";
+import xitReducer from "./slices/xitSlice";
 
 const store = configureStore({
-    reducer: {
-        xit: xitReducer,
-    }
-})
+  reducer: {
+    xit: xitReducer,
+    [apiSlice.reducerPath]: apiSlice.reducer,
+  },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(apiSlice.middleware),
+  devTools: process.env.NODE_ENV === "development",
+});
 
-export type AppStore = typeof store;
 export type RootState = ReturnType<typeof store.getState>;
-export type AppDispatch = AppStore['dispatch']
+export type AppDispatch = typeof store.dispatch;
 
-export default store
+export default store;
