@@ -2,7 +2,10 @@
     display: flex;
     gap: 8px;
     justify-content: flex-start;
+    margin-top: 7rem; 
+    margin-bottom: 1rem;
 }
+
 
 
 .logoText {
