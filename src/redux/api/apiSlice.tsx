@@ -9,7 +9,7 @@ import { toast } from "react-toastify";
 
 // Shared base query
 const baseQuery = fetchBaseQuery({
-  baseUrl: process.env.NEXT_PUBLIC_API_URL,
+  baseUrl: process.env.NEXT_PUBLIC_BASE_URL,
   prepareHeaders: (headers) => {
     const token = localStorage.getItem("accessToken");
     if (token) {

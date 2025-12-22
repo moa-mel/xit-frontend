@@ -36,6 +36,17 @@ export interface IRegisterPayload {
     lastName: string;
 }
 
+export interface ISignUpResponse {
+  message: string;
+  data: {
+    identifier: string;
+    email: string;
+    firstName: string;
+    lastName: string;
+  };
+}
+
+
 export const authService = apiSlice.injectEndpoints({
     endpoints: (builder) => ({
         login: builder.mutation<ILoginResponse, ILoginPayload>({
@@ -62,7 +73,7 @@ export const authService = apiSlice.injectEndpoints({
             invalidatesTags: ["User"],
         }),
 
-        signUp: builder.mutation<ILoginResponse, IRegisterPayload>({
+        signUp: builder.mutation<ISignUpResponse, IRegisterPayload>({
             query: (body) => ({
                 url: "/auth/signup",
                 method: "POST",
@@ -132,14 +143,13 @@ export const authService = apiSlice.injectEndpoints({
             })
         }),
         verifyEmail: builder.mutation({
-            query: ({ otp, token, expiration }) => ({
-                url: `/auth/verify-email/${token}/${expiration}/`,
+            query: ({ otp, identifier }) => ({
+                url: `/auth/verify-email/${identifier}`,
                 method: "POST",
-                body: {
-                    otp
-                }
-            })
+                body: { otp },
+            }),
         }),
+
 
     }),
 });

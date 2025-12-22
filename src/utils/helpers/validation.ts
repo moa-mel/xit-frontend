@@ -22,12 +22,12 @@ export const forgotPasswordSchema = Yup.object().shape({
     email: Yup.string().email("Invalid email address").required("Email is required")
 });
 
-export const verifyEmailSchema = (isOtpActive: boolean) =>
-    Yup.object().shape({
-        otp: isOtpActive
-            ? Yup.string().max(6, "Must be 6 characters")
-            : Yup.string().required("OTP code is required").max(6, "Must be 6 characters")
-    });
+export const verifyEmailSchema = Yup.object({
+  otp: Yup.string()
+    .required("OTP code is required")
+    .length(6, "OTP must be 6 characters"),
+});
+
 
 export const resetPasswordSchema = Yup.object().shape({
     password: Yup.string()

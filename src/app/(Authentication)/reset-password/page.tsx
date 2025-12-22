@@ -59,7 +59,7 @@ const ResetPassword = () => {
                     <label>Confirm Password</label>
                     <input {...register("confirmPassword")} placeholder="pass123@" type="password" />
                 </div>
-                <button type="button" className="resetButton" >
+                <button type="submit" className="resetButton" >
                     Reset Password
                 </button>
             </form>

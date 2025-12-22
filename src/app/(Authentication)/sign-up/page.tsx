@@ -28,10 +28,11 @@ const SignUp = () => {
 
     const handleSignUp = async (data: IRegisterPayload) => {
         try {
-            await signUp(data).unwrap();
+            const res = await signUp(data).unwrap();
+            const identifier = res.data.identifier;
 
             toast.success("Registration successful!");
-            router.push("/verify-email");
+            router.push(`/verify-email?type=signup&identifier=${identifier}`);
         } catch (err: any) {
             toast.error(err?.data?.message || "Something went wrong");
         }

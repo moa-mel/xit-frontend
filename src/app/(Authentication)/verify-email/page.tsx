@@ -2,16 +2,53 @@
 import "./VerifyEmail.css"
 import Image from "next/image";
 import logo from "@/assets/images/Icon.png"
-import { useRouter } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 import { useEffect, useState } from "react";
 import { verifyEmailSchema } from "@/utils/helpers/validation";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { useVerifyEmailMutation } from "@/redux/Auth/authService";
+import { useForm } from "react-hook-form";
 
 const VerifyEmail = () => {
     const router = useRouter()
-    const [isOtpActive, setIsOtpActive] = useState(false);
-    const resolver = yupResolver(verifyEmailSchema(isOtpActive));
+    const searchParams = useSearchParams();
+    const [verifyEmail] = useVerifyEmailMutation();
+
+    const type = searchParams.get("type"); // signup | reset
+    const identifier = searchParams.get("identifier");
+
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm({
+        resolver: yupResolver(verifyEmailSchema),
+    });
+
+
+    const handleVerify = async (data: { otp: string }) => {
+        if (!identifier) {
+            toast.error("Invalid verification link");
+            return;
+        }
+
+        try {
+            await verifyEmail({
+                otp: data.otp,
+                identifier,
+            }).unwrap();
+
+            toast.success("Verification successful");
+
+            if (type === "signup") router.push("/login");
+            if (type === "reset") router.push(`/reset-password?identifier=${identifier}`);
+        } catch (err: any) {
+            toast.error(err?.data?.message || "Verification failed");
+        }
+    };
+
+
 
     return (
         <div className="verifySection" >
@@ -25,16 +62,23 @@ const VerifyEmail = () => {
                 />
                 <span className="logoText">Xit</span>
             </header>
-            <div className="verifyTitle">Verify Email</div>
-            <div className="verifyForm">
+            <div className="verifyTitle">
+                {type === "reset" ? "Verify Email to Reset Password" : "Verify Email"}
+            </div>
+            <form className="verifyForm" onSubmit={handleSubmit(handleVerify)}>
                 <div className="verifyInput">
                     <label>OTP Code</label>
-                    <input placeholder="pass123@" type="number" />
+                    <input
+                        type="text"
+                        maxLength={6}
+                        {...register("otp")}
+                    />
+                    {errors.otp && <span className="error">{errors.otp.message}</span>}
                 </div>
-                <button type="button" className="verifyButton" >
-                    Verify Email
+                <button type="submit" className="verifyButton" >
+                    {type === "reset" ? "Verify & Continue" : "Verify Email"}
                 </button>
-            </div>
+            </form>
             <div className="divider">
                 <hr />
                 <span className="dividerText">Or</span>

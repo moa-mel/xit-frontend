@@ -30,6 +30,7 @@ const ForgotPassword = () => {
         try {
             const response = await forgotPassword(data).unwrap();
             toast.success("Password reset email sent successfully!");
+            router.push("/verify-email");
         } catch (error: any) {
             toast.error(error?.data?.message || "Failed to send reset email");
         }
