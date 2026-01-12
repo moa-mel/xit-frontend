@@ -1,17 +1,22 @@
 "use client";
 
 import { useEffect } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 
-const SSOAuth = () => {
+interface SSOAuthProps {
+  searchParams: {
+    token?: string;
+    refresh?: string;
+    isNewUser?: string;
+  };
+}
+
+const SSOAuth = ({ searchParams }: SSOAuthProps) => {
   const router = useRouter();
-  const searchParams = useSearchParams();
 
   useEffect(() => {
-    const token = searchParams.get("token");
-    const refresh = searchParams.get("refresh");
-    const isNewUser = searchParams.get("isNewUser");
+    const { token, refresh, isNewUser } = searchParams;
 
     if (!token) {
       toast.error("Authentication failed");

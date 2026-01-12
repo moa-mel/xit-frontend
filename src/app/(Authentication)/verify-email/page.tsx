@@ -2,21 +2,26 @@
 import "./VerifyEmail.css"
 import Image from "next/image";
 import logo from "@/assets/images/Icon.png"
-import { useSearchParams, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
-import { useEffect, useState } from "react";
-import { verifyEmailSchema } from "@/utils/helpers/validation";
-import { yupResolver } from "@hookform/resolvers/yup";
 import { useVerifyEmailMutation } from "@/redux/Auth/authService";
 import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { verifyEmailSchema } from "@/utils/helpers/validation";
 
-const VerifyEmail = () => {
+interface VerifyEmailProps {
+    searchParams: {
+        type?: string;
+        identifier?: string;
+    };
+}
+
+const VerifyEmail = ({ searchParams }: VerifyEmailProps) => {
     const router = useRouter()
-    const searchParams = useSearchParams();
     const [verifyEmail] = useVerifyEmailMutation();
 
-    const type = searchParams.get("type"); // signup | reset
-    const identifier = searchParams.get("identifier");
+    const type = searchParams.type; // signup | reset
+    const identifier = searchParams.identifier;
 
     const {
         register,
@@ -45,7 +50,7 @@ const VerifyEmail = () => {
             if (type === "signup") {
                 router.push("/login");
             } else if (type === "reset") {
-                router.push(`/reset-password?identifier=${identifier}`);
+                router.push(`/reset-password/${identifier}`);
             }
         } catch (err: any) {
             toast.error(err?.data?.message || "Verification failed");

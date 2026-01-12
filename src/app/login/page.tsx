@@ -5,18 +5,23 @@ import Image from "next/image";
 import loginBg from "@/assets/images/signup.png";
 import logo from "@/assets/images/Vector.png";
 import google from "@/assets/images/google.png";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { loginSchema } from "@/utils/helpers/validation";
 import { ILoginPayload, useLoginMutation } from "@/redux/Auth/authService";
 
-const Login = () => {
+interface LoginProps {
+    searchParams: {
+        redirectUrl?: string;
+    };
+}
+
+const Login = ({ searchParams }: LoginProps) => {
     const router = useRouter();
     const [loginUser, { isLoading }] = useLoginMutation();
-    const searchParams = useSearchParams() as URLSearchParams;
-    const redirectUrl = searchParams.get("redirectUrl");
+    const redirectUrl = searchParams.redirectUrl;
 
     const {
         register,
