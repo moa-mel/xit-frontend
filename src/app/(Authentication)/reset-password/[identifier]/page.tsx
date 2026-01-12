@@ -1,10 +1,10 @@
 "use client"
-import { useRouter, useSearchParams } from "next/navigation"
+import { useRouter, useParams } from "next/navigation"
 import "./ResetPassword.css"
 import Image from "next/image";
 import logo from "@/assets/images/Icon.png"
 import { toast } from "react-toastify";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { resetPasswordSchema } from "@/utils/helpers/validation";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useResetPasswordMutation } from "@/redux/Auth/authService";
@@ -17,9 +17,9 @@ interface ResetPasswordForm {
 
 const ResetPassword = () => {
     const router = useRouter()
+    const params = useParams();
+    const identifier = params.identifier as string;
     const [resetPassword, { isLoading }] = useResetPasswordMutation();
-    const searchParams = useSearchParams();
-    const identifier = searchParams.get('identifier');
 
     // Check if identifier exists on mount
     useEffect(() => {
