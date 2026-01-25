@@ -49,7 +49,6 @@
 .heroHeaderLeft h1 {
     font-family: 'Urbanist';
     font-weight: 700;
-    font-style: Bold;
     font-size: 30px;
     line-height: 100%;
     letter-spacing: -2%;
@@ -64,7 +63,6 @@
 .heroHeaderMain p {
     font-family: 'Raleway';
     font-weight: 500;
-    font-style: 'SemiBold';
     font-size: 12px;
     line-height: 100%;
     letter-spacing: 0%;
@@ -91,7 +89,6 @@
 .heroHeaderRight p {
     font-family: 'Raleway';
     font-weight: 500;
-    font-style: 'SemiBold';
     font-size: 12px;
     line-height: 100%;
     letter-spacing: 0%;
@@ -107,27 +104,201 @@
     padding: 0.5rem 1rem;
 }
 
-.heroWrap {}
+.heroWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    padding: 4rem 0;
+}
 
-.hwLeft {}
+.hwLeft {
+    flex: 1;
+    max-width: 600px;
+}
 
-.wrapButton {}
+.heroTitle {
+    position: relative;
+    margin-bottom: 2rem;
+}
 
-.hwRight {}
+.heroTitle h1 {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 110%;
+    letter-spacing: -0.02em;
+    margin: 0;
+}
 
-.heroFooter {}
+.underlineVector {
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    width: 240px;
+    height: auto;
+}
 
-.hfFirst {}
+.heroDescription {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2.5rem;
+}
 
-.hfSecond {}
+.getStartedButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: #646FC6;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 50px;
+    padding: 14px 28px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
 
-.hfThird {}
+.getStartedButton:hover {
+    background-color: #545FB0;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(100, 111, 198, 0.3);
+}
+
+.hwRight {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroImage {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+.heroFooter {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.hfFirst {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.hfFirst p,
+.hfSecond p,
+.hfThird p {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+.bullet {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 20px;
+}
 
 /* Responsive Design */
-@media (max-width: 1200px) {}
+@media (max-width: 1200px) {
+    .heroWrap {
+        gap: 2rem;
+    }
+    
+    .heroTitle h1 {
+        font-size: 52px;
+    }
+    
+    .underlineVector {
+        width: 200px;
+    }
+}
 
-@media (max-width: 992px) {}
+@media (max-width: 992px) {
+    .heroWrap {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+    }
+    
+    .hwLeft {
+        max-width: 100%;
+    }
+    
+    .heroTitle h1 {
+        font-size: 48px;
+    }
+    
+    .underlineVector {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .heroDescription {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+    .heroSection {
+        margin-left: 0;
+        border-radius: 0;
+    }
+    
+    .heroTitle h1 {
+        font-size: 40px;
+    }
+    
+    .underlineVector {
+        width: 160px;
+    }
+    
+    .heroFooter {
+        justify-content: center;
+    }
+}
 
-@media (max-width: 576px) {}
+@media (max-width: 576px) {
+    .heroContainer {
+        padding: 1.5rem 1rem;
+    }
+    
+    .heroTitle h1 {
+        font-size: 32px;
+    }
+    
+    .heroDescription {
+        font-size: 14px;
+    }
+    
+    .getStartedButton {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+    
+    .heroFooter {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .bullet {
+        display: none;
+    }
+}

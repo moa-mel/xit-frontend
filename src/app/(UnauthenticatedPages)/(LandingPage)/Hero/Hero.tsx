@@ -42,35 +42,33 @@ const Hero = () => {
 
                 <div className="heroWrap">
                     <div className="hwLeft">
-                        <h1>Conversations, Your Way</h1>
-                        <Image
-                            src={vector}
-                            alt="vector"
-                            width={50}
-                            height={50}
-                            priority={true} />
-                        <p>A clean, simple platform for live sessions and podcasts.<br />
+                        <div className="heroTitle">
+                            <h1>Conversations,<br />Your Way</h1>
+                            <Image
+                                src={vector}
+                                alt="vector"
+                                className="underlineVector"
+                                priority={true} />
+                        </div>
+                        <p className="heroDescription">A clean, simple platform for live sessions and podcasts.<br />
                             Host conversations, share ideas, and engage with your<br />
                             audience.</p>
-                        <div className="wrapButton">
-                            <button>
-                                Get Started
-                            </button>
+                        <button className="getStartedButton" onClick={handleGetStarted}>
+                            Get Started
                             <Image
                                 src={arrow}
                                 alt="arrow icon"
-                                width={50}
-                                height={50}
+                                width={20}
+                                height={20}
                                 priority={true}
                             />
-                        </div>
+                        </button>
                     </div>
                     <div className="hwRight">
                          <Image
                             src={hero}
                             alt="hero"
-                            width={50}
-                            height={50}
+                            className="heroImage"
                             priority={true} />
                     </div>
                 </div>
@@ -80,17 +78,19 @@ const Hero = () => {
                         <Image
                             src={group}
                             alt="group"
-                            width={50}
-                            height={50}
+                            width={60}
+                            height={24}
                             priority={true} />
-                            <p>1000+ Online Listeners</p>
+                        <p>1000+ Online Listeners</p>
                     </div>
-                    <span>.</span>
+                    <span className="bullet">•</span>
                     <div className="hfSecond">
                         <p>50+ live sessions hosted</p>
                     </div>
-                    <span>.</span>
-                    <div className="hfThird">200+ podcast episodes published</div>
+                    <span className="bullet">•</span>
+                    <div className="hfThird">
+                        <p>200+ podcast episodes published</p>
+                    </div>
                 </div>
             </div>
 
