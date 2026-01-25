@@ -6,8 +6,8 @@ export default function LandingPageClient() {
     return (
         <main>
             <Hero/>
-            <Services/>
-            <Process/>
+            {/* <Services/>
+            <Process/> */}
         </main>
     )
 }

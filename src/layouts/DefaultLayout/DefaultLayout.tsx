@@ -7,13 +7,9 @@ import "./DefaultLayout.css";
 const DefaultLayout = ({ children }: { children: ReactNode }) => {
     return(
         <div className="container">
-            <div className="navbar">
-                <Header/>
-            </div>
             <div className="body">
                 {children}
             </div>
-            <Footer/>
         </div>
     )
 }
