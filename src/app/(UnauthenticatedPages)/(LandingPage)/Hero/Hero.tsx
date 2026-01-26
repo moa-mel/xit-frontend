@@ -2,12 +2,13 @@
 import Image from "next/image";
 import Logo from "@/assets/images/Frame.png"
 import hero from "@/assets/images/Group 33600.png"
-import arrow from "@/assets/images/arrow right.png"
+import arrow from "@/assets/images/Frame 2121453332.png"
 import group from "@/assets/images/Group 109.png"
 import vector from "@/assets/images/Vector 7759.png"
 import "./Hero.css";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import hamBurger from "@/assets/images/Group 33576.png"
 
 const Hero = () => {
     const router = useRouter();
