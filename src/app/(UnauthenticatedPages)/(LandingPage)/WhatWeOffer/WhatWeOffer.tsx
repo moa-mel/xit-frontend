@@ -15,7 +15,7 @@ const WhatWeOffer = () => {
                     <div className="offerItems">
                         <div className="offerHead">
                             <h3>POWERFUL TOOLS</h3>
-                            <h4>Bring Moments To Life</h4>
+                            <h4>Bring Moments To <span style={{color: '#60D5E8'}}>Life</span></h4>
                         </div>
                         <div>
                             <Image

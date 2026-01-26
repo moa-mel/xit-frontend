@@ -27,9 +27,11 @@ const Benefits = () => {
                                     height={20}
                                     priority={true}
                                 />
+                                <div>
                                 <p>Easy Episode Uploads</p>
                                 <span>Quickly upload your audio files and get <br/>
                                  them live.</span>
+                                 </div>
                             </div>
                             <div className="benefitList">
                                 <Image
@@ -39,8 +41,11 @@ const Benefits = () => {
                                     height={20}
                                     priority={true}
                                 />
+                                <div>
                                 <p>Organize Into Series</p>
-                                <span>Group episodes into seasons or themes <br/> for easy navigation.</span>
+                                <span>Group episodes into seasons or themes <br/> 
+                                for easy navigation.</span>
+                                </div>
                             </div>
                             <div className="benefitList">
                                 <Image
@@ -50,9 +55,11 @@ const Benefits = () => {
                                     height={20}
                                     priority={true}
                                 />
+                                <div>
                                 <p>Background Listening</p>
                                 <span>Let your audience listen while multitasking <br/>
                                  on their devices.</span>
+                                 </div>
                             </div>
                         </div>
 

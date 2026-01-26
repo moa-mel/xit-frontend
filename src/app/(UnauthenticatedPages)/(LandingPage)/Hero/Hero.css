@@ -26,10 +26,11 @@
 }
 
 .heroContainer {
-    max-width: 1400px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: none;      
+    margin: 0;            
+    padding: 2rem 4rem 2rem 2rem;   
     position: relative;
-    padding: 2rem 2rem;
 }
 
 .heroHeader {
@@ -109,6 +110,9 @@
     align-items: center;
     gap: 4rem;
     padding: 4rem 0;
+    
+    /* ADD: Ensure the wrapper stretches the full width of the container */
+    width: 100%;
 }
 
 .hwLeft {
@@ -172,13 +176,16 @@
 .hwRight {
     flex: 1;
     display: flex;
-    justify-content: center;
+    /* CHANGE: Align the hero image container to the far right */
+    justify-content: flex-end; 
     align-items: center;
 }
 
 .heroImage {
+    /* OPTIONAL: Increase this if you want the image to appear larger 
+       now that there is more room on the right */
     width: 100%;
-    max-width: 500px;
+    max-width: 650px; 
     height: auto;
 }
 

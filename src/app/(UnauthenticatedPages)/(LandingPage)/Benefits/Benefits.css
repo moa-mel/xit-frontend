@@ -1,3 +1,115 @@
-.benefitSection{
-    
+.benefitSection {
+    background-color: #FFFFFF;
+    padding: 6rem 4rem;
+    position: relative;
+}
+
+.benefitContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.benefitHeader {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.benefitHeader h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    letter-spacing: 0%;
+    color: #131735;
+    text-transform: uppercase;
+    text-align:left;
+}
+
+.benefitMain {
+    top: -7px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.benefitMain h1 {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 120%;
+    color: #1a1f3a;
+    margin-bottom: 3rem;
+}
+
+.benefitMain h1 span {
+    color: #646FC6;
+}
+
+.benefitItems {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.benefitList {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+}
+
+.benefitList Image {
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+    background: #F3F4F6;
+    border-radius: 12px;
+}
+
+.benefitList p {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 130%;
+    color: #1a1f3a;
+    margin: 0;
+}
+
+.benefitList span {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #6B7280;
+    margin: 0;
+}
+
+.groupImage {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+@media (max-width: 992px) {
+    .benefitSection {
+        padding: 4rem 2rem;
+    }
+
+    .benefitMain {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .benefitMain h1 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 576px) {
+    .benefitSection {
+        padding: 3rem 1rem;
+    }
+
+    .benefitMain h1 {
+        font-size: 28px;
+    }
 }

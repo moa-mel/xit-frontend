@@ -13,7 +13,7 @@ const Features = () => {
             <div className="featureContainer">
                 <div className="featureHeader">
                     <h3>One single platform</h3>
-                    <h2>Two Ways To Connect</h2>
+                    <h2>Two Ways To <span style={{color: '#646FC6'}}>Connect</span></h2>
                 </div>
                 <div className="featureWrap">
                     <div className="featureLeft">
@@ -48,16 +48,16 @@ const Features = () => {
                     <div className="featureRight">
                         <h3>Choose how you want to share.</h3>
                         <p>Go live, publish podcasts, or do both without setting up multiple tools or workflows.</p>
-                        <button>
+                        <p className="btnFeature">
                             Get Started
                             <Image
                                 src={arrow}
                                 alt="arrow icon"
-                                width={20}
-                                height={20}
+                                width={15}
+                                height={15}
                                 priority={true}
                             />
-                        </button>
+                        </p>
                     </div>
                 </div>
             </div>
