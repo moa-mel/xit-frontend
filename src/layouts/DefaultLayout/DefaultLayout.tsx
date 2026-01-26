@@ -1,5 +1,4 @@
 import Footer from "@/components/Footer/Footer";
-import Header from "@/components/Header/Header";
 import { ReactNode } from "react";
 import "./DefaultLayout.css";
 
@@ -9,6 +8,7 @@ const DefaultLayout = ({ children }: { children: ReactNode }) => {
         <div className="container">
             <div className="body">
                 {children}
+                <Footer/>
             </div>
         </div>
     )

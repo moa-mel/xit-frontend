@@ -1,13 +1,15 @@
 import Hero from "./Hero/Hero";
-import Process from "./Process/Process";
-import Services from "./Services/Services";
+import Features from "./Features/Features";
+import Benefits from "./Benefits/Benefits";
+import WhatWeOffer from "./WhatWeOffer/WhatWeOffer";
 
 export default function LandingPageClient() {
     return (
         <main>
             <Hero/>
-            {/* <Services/>
-            <Process/> */}
+            <Features/>
+            <Benefits/>
+            <WhatWeOffer/>
         </main>
     )
 }

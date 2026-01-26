@@ -1,15 +1,15 @@
 "use client";
-import "./Process.css"
+import "./WhatWeOffer.css"
 import Image from "next/image";
 import { useState } from "react";
 
-const Process = () => {
+const WhatWeOffer = () => {
     
     return (
-        <div className="processSection">
+        <div className="offerSection">
             
         </div>
     )
 }
 
-export default Process
+export default WhatWeOffer

@@ -7,6 +7,7 @@ import group from "@/assets/images/Group 109.png"
 import vector from "@/assets/images/Vector 7759.png"
 import "./Hero.css";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const Hero = () => {
     const router = useRouter();
