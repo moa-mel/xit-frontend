@@ -5,12 +5,10 @@ import "./DefaultLayout.css";
 
 const DefaultLayout = ({ children }: { children: ReactNode }) => {
     return(
-        <div className="container">
-            <div className="body">
-                {children}
-                <Footer/>
-            </div>
-        </div>
+        <>
+            {children}
+            <Footer/>
+        </>
     )
 }
 

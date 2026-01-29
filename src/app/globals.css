@@ -1,0 +1,23 @@
+/* Global styles to remove default margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+main {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding-left: 4rem; /* Add left padding for white space */
+  padding-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}

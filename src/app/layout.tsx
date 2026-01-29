@@ -2,6 +2,7 @@ import { ToastContainer } from "react-toastify";
 import { ReduxProvider } from "@/redux/provider";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-toastify/dist/ReactToastify.css";
+import "./globals.css";
 
 export const metadata = {
   title: "Xit App",
