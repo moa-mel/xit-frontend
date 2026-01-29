@@ -12,14 +12,14 @@
     content: '';
     position: absolute;
     top: -550px;
-    left: 27px;
-    width: 768px;
+    left: 20px;
+    width: 700px;
     height: 1764px;
 
     background: #FFFFFF;
     opacity: 0.05;
 
-    transform: rotate(30deg);
+    transform: rotate(-30deg);
     transform-origin: center;
 
     z-index: 0;
