@@ -16,8 +16,9 @@ main {
   max-width: 100%;
   overflow: hidden;
   margin: 0;
-  padding-left: 4rem; /* Add left padding for white space */
+  /* padding-left: 4rem; 
   padding-right: 0;
   padding-top: 0;
-  padding-bottom: 0;
+  padding-bottom: 0; */
+   padding: 0;
 }
