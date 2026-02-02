@@ -9,13 +9,14 @@ const Footer = () => {
         <footer>
             <div className="footerSection">
                 <div className="footerContainer">
+                    <p className="footerLine"></p>
                     <div className="footerUp">
                         <div className="footerItem">
                             <Image
                                 src={logo}
                                 alt="logo"
-                                width={20}
-                                height={20}
+                                width={90}
+                                height={40}
                                 priority={true}
                             />
                             <p>
