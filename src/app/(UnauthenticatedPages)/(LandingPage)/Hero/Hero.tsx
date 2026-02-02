@@ -60,8 +60,8 @@ const Hero = () => {
                             <Image
                                 src={arrow}
                                 alt="arrow icon"
-                                width={20}
-                                height={20}
+                                width={40}
+                                height={40}
                                 priority={true}
                             />
                         </button>

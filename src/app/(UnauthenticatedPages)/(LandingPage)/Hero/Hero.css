@@ -6,14 +6,19 @@
     width: 100%;
     overflow: hidden;
     border-radius: 0 0 0 50px;
+    padding-left: 4rem;
+    /* Add left padding for white space */
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .heroSection::before {
     content: '';
     position: absolute;
-    top: -550px;
-    left: 20px;
-    width: 700px;
+    top: -500px;
+    left: 300px;
+    width: 550px;
     height: 1764px;
 
     background: #FFFFFF;
@@ -27,10 +32,13 @@
 
 .heroContainer {
     width: 100%;
-    max-width: none;      
-    margin: 0;            
-    padding: 2rem 4rem 2rem 2rem;   
+    max-width: none;
+    margin: 0;
+    padding: 2rem 4rem 2rem 0;
+    /* Remove left padding from container */
     position: relative;
+    height: 100%;
+    box-sizing: border-box;
 }
 
 .heroHeader {
@@ -56,14 +64,14 @@
 
 .heroHeaderMain {
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     justify-content: center;
 }
 
 .heroHeaderMain p {
     font-family: 'Raleway';
     font-weight: 500;
-    font-size: 12px;
+    font-size: 13.5px;
     line-height: 100%;
     letter-spacing: 0%;
     cursor: pointer;
@@ -73,23 +81,23 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #262942;
-    border: 1px solid #262942;
+    background-color: #FFFFFF0D;
+    border: 1px solid #FFFFFF0D;
     border-radius: 45px;
-    min-width: 80px; 
+    min-width: 80px;
     padding: 0.5rem 1rem;
 }
 
 .heroHeaderRight {
     justify-content: flex-end;
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .heroHeaderRight p {
     font-family: 'Raleway';
     font-weight: 500;
-    font-size: 12px;
+    font-size: 13.5px;
     line-height: 100%;
     letter-spacing: 0%;
     cursor: pointer;
@@ -100,7 +108,7 @@
     background-color: #646FC6;
     border: 1px solid #646FC6;
     border-radius: 45px;
-    min-width: 80px; 
+    min-width: 80px;
     padding: 0.5rem 1rem;
 }
 
@@ -110,7 +118,7 @@
     align-items: center;
     gap: 4rem;
     padding: 4rem 0;
-    
+
     /* ADD: Ensure the wrapper stretches the full width of the container */
     width: 100%;
 }
@@ -126,18 +134,24 @@
 }
 
 .heroTitle h1 {
-    font-family: 'Urbanist', sans-serif;
-    font-weight: 700;
-    font-size: 64px;
-    line-height: 110%;
-    letter-spacing: -0.02em;
+    font-family: 'Raleway';
+    font-weight: 800;
+    font-size: 80px;
+    line-height: 110.00000000000001%;
+    font-style: 'ExtraBold';
+    color: #FFFFFF;
+    letter-spacing: 4%;
     margin: 0;
 }
 
 .underlineVector {
     position: absolute;
-    bottom: -10px;
-    right: 0;
+    bottom: -20px;
+    /* Increased from -10px to move it down */
+    right: auto;
+    /* Changed from 0 to auto */
+    left: 150px;
+    /* Added to move it to the left */
     width: 240px;
     height: auto;
 }
@@ -147,19 +161,19 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 160%;
-    color: rgba(255, 255, 255, 0.8);
+    color: #FFFFFF;
     margin-bottom: 2.5rem;
 }
 
 .getStartedButton {
     display: inline-flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 1.8rem;
     background-color: #646FC6;
     color: #FFFFFF;
     border: none;
     border-radius: 50px;
-    padding: 14px 28px;
+    padding: 10px 28px;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
     font-size: 16px;
@@ -177,7 +191,7 @@
     flex: 1;
     display: flex;
     /* CHANGE: Align the hero image container to the far right */
-    justify-content: flex-end; 
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -185,7 +199,7 @@
     /* OPTIONAL: Increase this if you want the image to appear larger 
        now that there is more room on the right */
     width: 100%;
-    max-width: 650px; 
+    max-width: 650px;
     height: auto;
 }
 
@@ -224,11 +238,11 @@
     .heroWrap {
         gap: 2rem;
     }
-    
+
     .heroTitle h1 {
         font-size: 52px;
     }
-    
+
     .underlineVector {
         width: 200px;
     }
@@ -240,20 +254,20 @@
         text-align: center;
         gap: 3rem;
     }
-    
+
     .hwLeft {
         max-width: 100%;
     }
-    
+
     .heroTitle h1 {
         font-size: 48px;
     }
-    
+
     .underlineVector {
         left: 50%;
         transform: translateX(-50%);
     }
-    
+
     .heroDescription {
         max-width: 600px;
         margin-left: auto;
@@ -266,15 +280,15 @@
         margin-left: 0;
         border-radius: 0;
     }
-    
+
     .heroTitle h1 {
         font-size: 40px;
     }
-    
+
     .underlineVector {
         width: 160px;
     }
-    
+
     .heroFooter {
         justify-content: center;
     }
@@ -284,26 +298,26 @@
     .heroContainer {
         padding: 1.5rem 1rem;
     }
-    
+
     .heroTitle h1 {
         font-size: 32px;
     }
-    
+
     .heroDescription {
         font-size: 14px;
     }
-    
+
     .getStartedButton {
         padding: 12px 24px;
         font-size: 14px;
     }
-    
+
     .heroFooter {
         flex-direction: column;
         align-items: flex-start;
         gap: 1rem;
     }
-    
+
     .bullet {
         display: none;
     }

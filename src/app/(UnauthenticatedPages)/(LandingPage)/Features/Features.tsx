@@ -13,7 +13,7 @@ const Features = () => {
             <div className="featureContainer">
                 <div className="featureHeader">
                     <h3>One single platform</h3>
-                    <h2>Two Ways To <span style={{color: '#646FC6'}}>Connect</span></h2>
+                    <h2>Two Ways To <span style={{ color: '#646FC6' }}>Connect</span></h2>
                 </div>
                 <div className="featureWrap">
                     <div className="featureLeft">
@@ -22,26 +22,30 @@ const Features = () => {
                                 <Image
                                     src={video}
                                     alt="video"
-                                    width={20}
-                                    height={20}
+                                    width={50}
+                                    height={50}
                                     priority={true}
                                 />
-                                <p>Live Streaming</p>
-                                <span>Host conversations as they happen.<br />
-                                    Join discussions, listen in, and engage with <br />
-                                    others — all in the moment.</span>
+                                <div className="featureItemContent">
+                                    <p>Live Streaming</p>
+                                    <span>Host conversations as they happen.<br />
+                                        Join discussions, listen in, and engage with <br />
+                                        others — all in the moment.</span>
+                                </div>
                             </div>
                             <div className="featureItem">
                                 <Image
                                     src={podcast}
                                     alt="podcast"
-                                    width={20}
-                                    height={20}
+                                    width={50}
+                                    height={50}
                                     priority={true}
                                 />
-                                <p>Podcasts</p>
-                                <span>Publish structured, on-demand episodes <br />
-                                    your audience can listen to anytime.</span>
+                                <div className="featureItemContent">
+                                    <p>Podcasts</p>
+                                    <span>Publish structured, on-demand episodes <br />
+                                        your audience can listen to anytime.</span>
+                                </div>
                             </div>
                         </div>
                     </div>
