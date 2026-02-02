@@ -1,3 +1,8 @@
+.heroWrapper {
+    padding-left: 4rem;
+    /* Add left padding for white space */
+}
+
 .heroSection {
     background-color: #1a1f3a;
     color: #FFFFFF;
@@ -6,11 +11,6 @@
     width: 100%;
     overflow: hidden;
     border-radius: 0 0 0 50px;
-    padding-left: 4rem;
-    /* Add left padding for white space */
-    padding-right: 0;
-    padding-top: 0;
-    padding-bottom: 0;
 }
 
 .heroSection::before {
@@ -34,8 +34,8 @@
     width: 100%;
     max-width: none;
     margin: 0;
-    padding: 2rem 4rem 2rem 0;
-    /* Remove left padding from container */
+    padding: 2rem 4rem 2rem 3rem;
+    /* Add more left padding to shift content right */
     position: relative;
     height: 100%;
     box-sizing: border-box;

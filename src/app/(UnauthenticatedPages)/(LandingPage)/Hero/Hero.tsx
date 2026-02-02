@@ -17,6 +17,7 @@ const Hero = () => {
         router.push("/sign-up")
     }
     return (
+        <div className="heroWrapper">
         <div className="heroSection">
             <div className="heroContainer">
                 <div className="heroHeader">
@@ -96,6 +97,7 @@ const Hero = () => {
                 </div>
             </div>
 
+        </div>
         </div>
     )
 }
